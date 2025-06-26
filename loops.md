@@ -43,4 +43,32 @@ Iteration: Updates the loop variable after each iteration (i increments by defau
 
 `fruits = ["apple", "banana", "cherry"]`
 `for count in fruits:`
-`    print(count)`
+`    print(count)` 
+
+*Initialisation: The variable fruit is initialized with the first element from the list.*
+*Condition: The loop continues until all elements in the list have been iterated over.*
+*Iteration: fruit is automatically updated to the next element in the list in each iteration.*
+
+###### prac 4
+// PseudoCode
+
+start the program
+    ground = 0
+    maxHeight = 100
+    rocketLocation = 0
+    
+    while rocketLocation <= maxHeight
+        output the rocket height
+        increase the rocketLocation by one meter
+    
+    when the rocket has reached maxHeight
+        output maxHeight reached
+    
+    While the rocketLocation > 0
+        output "rocket falling"
+        decrease the rocketLocation by 1
+        output "new loacation"
+    
+    When rocketLocation = 0
+        output "rocket has landed"
+end the program

@@ -79,4 +79,3 @@ while True:
         print(f"{albumToCheck} is in the list")
     else:
         print(f"{albumToCheck} is not in the list")
-
