@@ -1,0 +1,22 @@
+name = str(input("What is your name? "))
+age = int(input("How old are you? "))
+snack = str(input("What snack would you like to bring? "))
+game_length = float(input("How many minutes would you like to play? "))
+water_play = bool(input("Do you like water play? "))
+
+print(f"Hi {name}! You're {age} years old and ready to play in Bluey's backyard. You'll play for {game_length} minutes and bring your favourite snack: {snack}. Water play? {water_play}. Better bring a towel!")
+
+games_list = ["Keepy Uppy", "Magic Asparagus", "Shadowlands", "Obstacle Course", "Muffin Cone"]
+
+print(games_list)
+print("First game:", games_list[0])
+print("Last game:", games_list[-1])
+
+games_list.append("Grannies")
+print(games_list)
+
+games_list[2] = "Magic Wand"
+print(games_list)
+
+for game in games_list:
+    print("Let's play:", game)
