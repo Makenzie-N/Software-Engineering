@@ -9,4 +9,9 @@ collect = int(input("How many more woodblocks would you like to collect?"))
 if woodblocks >= 10
 break
 
-print(f"Your username is {username}. You have collected {woodblocks}. The total weight of your woodblocks is {weight * woodblocks}kg. It is {daytime} therfore it is {}.")
+print(f"Your username is {username}. You have collected {woodblocks}. The total weight of your woodblocks is {weight * woodblocks}kg.")
+
+if daytime = yes:
+  print("It is daytime, therfore it is safe to build.")
+else:
+  print("It is nighttime, therefore it is not safe to build.")
