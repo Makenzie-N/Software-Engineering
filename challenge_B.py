@@ -1,6 +1,6 @@
 username = str(input("What is your Minecraft username?"))
-woodblocks = int(input("How many wood blocks do you have?"))     
-weight = float(input("How heavy is each block? (in kg's)"))
+woodblocks = int(input("How many wood blocks do you currently have?"))     
+weight = float(input("How much does one block weigh (kg)?"))
 daytime = bool(input("Is it daytime?"))
 
 while woodblocks <= 10:
