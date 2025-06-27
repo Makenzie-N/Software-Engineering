@@ -15,8 +15,9 @@ print("Last game:", games_list[-1])
 games_list.append("Grannies")
 print(games_list)
 
-games_list[2] = "Magic Wand"
+games_list[1] = "Magic Wand"
 print(games_list)
+# first item in list is 0
 
 for game in games_list:
     print("Let's play:", game)
