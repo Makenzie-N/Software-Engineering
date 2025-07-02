@@ -32,4 +32,15 @@
 `for fruit in fruits:`
 `    print("I like", fruit)`
 
-**length o a list**
+**length of a list**
+`print(len(fruits))`  
+*displays the number of items in the list*
+
+**MINI QUIZ**What index is the first item in a list?
+
+How do you add something to a list?
+
+What does len(my_list) return?
+
+Can a list store both numbers and strings?
+
