@@ -36,11 +36,12 @@
 `print(len(fruits))`  
 *displays the number of items in the list*
 
-**MINI QUIZ**What index is the first item in a list?
-
+**MINI QUIZ**
+What index is the first item in a list?
+0
 How do you add something to a list?
-
+.append
 What does len(my_list) return?
-
+it gets the program to display the length of the list/the number of items in the list
 Can a list store both numbers and strings?
-
+yes, a list can store both numbers and strings
