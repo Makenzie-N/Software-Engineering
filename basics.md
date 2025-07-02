@@ -215,7 +215,15 @@ print(laugh)
 **different data types**
 `mixed_list = [1, "text", 3.14, True]`
 
-
+**USING A BOOLEAN**
+    if processed_response == 'false':
+        is_false = False
+    elif processed_response == 'true':
+        is_false = True
+    else:
+        # Handle invalid input, e.g., assign a default or raise an error
+        print("Invalid input. Assuming False.")
+        is_false = False 
 
 
 
