@@ -80,7 +80,7 @@ print("Hi", name)
 # comparing two product release dates to determine which one is newer.
 
 
-########## Data vs Information
+########## Data vs Information vs Knowledge
 
 # DATA
 # Raw, unprocessed facts and figures without context.
