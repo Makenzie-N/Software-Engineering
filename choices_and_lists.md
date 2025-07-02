@@ -49,3 +49,16 @@ yes, a list can store both numbers and strings
 
 
 Lists in programming provide a versatile data structure that supports various operations for data manipulation. Common operations include appending elements using the append() method, inserting elements at specific positions with insert(), and removing elements using remove() or pop(). Lists can be concatenated using the + operator or extended with extend(). Additionally, you can retrieve elements by index, slice lists for sublists, and reverse the order using reverse(). Sorting operations are also available through the sort() method. These operations make lists a powerful tool for handling collections of data efficiently.
+
+# Create an array of 5 numbers
+numbers = [32, 14, 7, 25, 19]
+
+# Create a new array to hold numbers in ascending order
+ascending_numbers = sorted(numbers)
+
+# Create a new array to hold numbers in descending order
+descending_numbers = sorted(numbers, reverse=True)
+
+print("Original numbers:", numbers)
+print("Ascending order:", ascending_numbers)
+print("Descending order:", descending_numbers)
