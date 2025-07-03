@@ -102,3 +102,46 @@ print(no_drinks)
 print(len(drinks))
 
 ### prac 7
+    #challenge 1
+
+myNumbers = []
+for i in range (1-4):
+  userInput = int(input("Enter number: "))
+  myNumbers.append(userInput)
+print(myNumbers)
+for number in myNumbers:
+  print(number)
+
+BEGIN
+  DECLARE myNumbers AS LIST OF INTEGER
+  FOR i FROM 1 TO 5
+    PROMPT "Enter number:"
+    READ userInput
+    APPEND userInput TO myNumbers
+  ENDFOR
+
+  DECLARE sortedAscending AS LIST
+  SET sortedAscending TO SORT(myNumbers)
+
+  DECLARE sortedDescending AS LIST
+  SET sortedDescending TO SORT(myNumbers) IN REVERSE ORDER
+
+  PRINT "Middle number of the original list:" 
+  PRINT myNumbers[2]
+
+  PRINT "Middle number of the sorted ascending list:"
+  PRINT sortedAscending[2]
+
+  PRINT "Middle number of the sorted descending list:"
+  PRINT sortedDescending[2]
+END
+
+myNumbers = []
+for i in range (1-5):
+  userInput(int(input("Enter number: "))
+  myNumbers.append(userInput)
+sortedAscending = []
+sortedAscending = sorted(myNumbers)
+
+sortedAscending = []
+sortedAscending = sorted(myNumbers, reverse = True)
