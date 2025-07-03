@@ -17,7 +17,7 @@ print(thislist[:4])
 # accessing from the beginning to the position
 
 thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
-print(thislist[2:]
+print(thislist[2:])
 # accessing from the end to the position
 
 thislist = ["apple", "banana", "cherry"]
@@ -105,43 +105,30 @@ print(len(drinks))
     #challenge 1
 
 myNumbers = []
-for i in range (1-4):
+for i in range (myNumbers):
   userInput = int(input("Enter number: "))
   myNumbers.append(userInput)
 print(myNumbers)
 for number in myNumbers:
   print(number)
 
-BEGIN
-  DECLARE myNumbers AS LIST OF INTEGER
-  FOR i FROM 1 TO 5
-    PROMPT "Enter number:"
-    READ userInput
-    APPEND userInput TO myNumbers
-  ENDFOR
+    #challenge 2
 
-  DECLARE sortedAscending AS LIST
-  SET sortedAscending TO SORT(myNumbers)
+numbers = []
 
-  DECLARE sortedDescending AS LIST
-  SET sortedDescending TO SORT(myNumbers) IN REVERSE ORDER
+while i in range (numbers):
+  user = int(input("Enter a number: "))
+  numbers.append(user)
+  if (len(numbers)) >= 5:
+    break
 
-  PRINT "Middle number of the original list:" 
-  PRINT myNumbers[2]
+ascending = sorted(numbers)
+descending = sorted(numbers, reverse=True)
 
-  PRINT "Middle number of the sorted ascending list:"
-  PRINT sortedAscending[2]
+print(numbers)
+print(ascending)
+print(descending)
 
-  PRINT "Middle number of the sorted descending list:"
-  PRINT sortedDescending[2]
-END
-
-myNumbers = []
-for i in range (1-5):
-  userInput(int(input("Enter number: "))
-  myNumbers.append(userInput)
-sortedAscending = []
-sortedAscending = sorted(myNumbers)
-
-sortedAscending = []
-sortedAscending = sorted(myNumbers, reverse = True)
+print(numbers[2])
+print(ascending[2])
+print(descending[2])
