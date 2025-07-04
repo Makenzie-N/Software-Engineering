@@ -1,9 +1,9 @@
 while True:
-        action = (input("What did they do? (choose: insult, ignored, apologised, praised) ")).lower().strip()
+        action = string(input("What did they do? (choose: insult, ignored, apologised, praised) ")).lower().strip()
         if action in ["insult", "ignored", "apologised", "praised"]:
-                like = (input("Did they like your latest post? ")).lower().strip()
+                like = bool(input("Did they like your latest post? ")).lower().strip()
                 if like in ["yes", "no"]:
-                        friend = (input("Are they your real-life friend? ")).lower().strip()
+                        friend = bool(input("Are they your real-life friend? ")).lower().strip()
                         if friend in ["yes", "no"]:
                                 break
 
