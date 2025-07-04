@@ -1,48 +1,39 @@
 while True:
-        action = string(input("What did they do? (choose: insult, ignored, apologised, praised) ")).lower().strip()
-        if action in ["insult", "ignored", "apologised", "praised"]:
-                like = bool(input("Did they like your latest post? ")).lower().strip()
-                if like in ["yes", "no"]:
-                        friend = bool(input("Are they your real-life friend? ")).lower().strip()
-                        if friend in ["yes", "no"]:
-                                break
+    action = str(input("What did they do? (choose: insulted, ignored, apologised, praised) ")).lower().strip()
+    if action in ["insulted", "ignored", "apologised", "praised"]:
+        break
 
-if like == 'yes':
-        like_good = True
-elif like == 'no':
-        like_good = False
-else:
-        like_good = False
+while True:
+    like = (input("Did they like your latest post? ")).strip().lower()
+    if like in ["yes", "no"]:
+        break
 
-if friend == 'yes':
-        friend_good = True
-elif friend == 'no':
-        friend_good = False
-else:
-        friend_good = False
+while True:
+    friend = (input("Are they your real-life friend? ")).strip().lower()
+    if friend in ["yes", "no"]:
+        break
 
-if action in ["apologised", "praised"]:
-    action_good = True
-elif action in ["insult", "ignored"]:
-    action_good = False
-else:
-    action_good = False
-
-if like_good == True + friend_good == True + action_good == True:
-       print("They seem like a good friend, keep following them!")
-elif like_good == False + friend_good == True + action_good == True:
-       print("They most likely missed your post, keep following them!")
-elif like_good == True + friend_good == False + action_good == True:
-       print("Their not a real-life friend, probably best to unfollow them.")
-elif like_good == True + friend_good == True + action_good == False:
-       print("Let them think about their actions, mute them for now.")
-elif like_good == False + friend_good == False + action_good == True:
-       print("Unfollow, what are they praising or apologising for if they aren't even a real life friend?")
-elif like_good == False + friend_good == True + action_good == False:
-       print("Mute them, it seems like somethings up and you should give them time to reflect on that.")
-elif like_good == True + friend_good == False + action_good == False:
-        print("Block! They aren't a real-life friend and don't seem to have a set opinion on you.")
-elif like_good == False + friend_good == False + action_good == False:
-        print(Block! No one talks to you like that, especially someone who isn't a real-life friend.")
-else:
-        print("Incorrect input, I don't understand. Please try again.")
+if action in ["praised", "apologised"]:
+    if like == "yes":
+        if friend == "yes":
+            print("They seem like a true and engaging friend, keep following them!")
+        elif friend == "no":
+            print("Not a real-life friend but still engaging and nice, keep following them!")
+    elif like == "no":
+        if friend == "yes":
+            print("Maybe they missed your post, let this one slide and keep following them.")
+        elif friend == "no":
+            print("Unfollow them, they haven't shown you full deserved care and shouldn't gain your trust just yet.")
+    else:
+        print("Error! I don't understand, please try again.")
+else:  # activity = insulted/ignored
+    if like == "yes":
+        if friend == "yes":
+            print("They don't deserve to talk to you like that but they must still care, mute them for now and let them reflect on their actions.")
+        elif friend == "no":
+            print("Unfollow them, they seem untrustworthy and not fit to be your true companion.")
+    elif like == "no":
+        if friend == "yes":
+            print("They are showing no effort to reflect and change their actions, mute them until they are.")
+        elif friend == "no":
+            print("Block them! They are proving no commitment or effort to build a loyal relationship and don't deserve all your time and energy.")
