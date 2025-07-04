@@ -1,6 +1,11 @@
-action = str(input("What did they do? (choose: insult, ignored, apologised, praised)"))
-like = bool(input("Did they like your latest post?"))
-friend = bool(input("Are they your real-life friend?"))
+while True:
+        action = (input("What did they do? (choose: insult, ignored, apologised, praised) ")).lower().strip()
+        if action in ["insult", "ignored", "apologised", "praised"]:
+                like = (input("Did they like your latest post? ")).lower().strip()
+                if like in ["yes", "no"]:
+                        friend = (input("Are they your real-life friend? ")).lower().strip()
+                        if friend in ["yes", "no"]:
+                                break
 
 if like == 'yes':
         like_good = True
@@ -32,6 +37,12 @@ elif like_good == True + friend_good == False + action_good == True:
 elif like_good == True + friend_good == True + action_good == False:
        print("Let them think about their actions, mute them for now.")
 elif like_good == False + friend_good == False + action_good == True:
-       print("Unfollow, what are they praising or apologising for?")
+       print("Unfollow, what are they praising or apologising for if they aren't even a real life friend?")
 elif like_good == False + friend_good == True + action_good == False:
-       print("Mute, ")
+       print("Mute them, it seems like somethings up and you should give them time to reflect on that.")
+elif like_good == True + friend_good == False + action_good == False:
+        print("Block! They aren't a real-life friend and don't seem to have a set opinion on you.")
+elif like_good == False + friend_good == False + action_good == False:
+        print(Block! No one talks to you like that, especially someone who isn't a real-life friend.")
+else:
+        print("Incorrect input, I don't understand. Please try again.")
