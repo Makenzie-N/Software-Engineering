@@ -21,4 +21,4 @@ def multiple_items(*args): #args = arguments
 multiple_items("Dave", "John", "Sarah")
 
 def mult_named_items(**kwargs): #kwargs = keyword arguments
-    print(kwargsporint(type(kwargs)))
+    print(print(type(kwargs)))
