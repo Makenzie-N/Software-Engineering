@@ -2,6 +2,7 @@ def hello_world(): #defines the function hello_world
     print("Hello world!")
 
 hello_world() #calls function
+              #therefore prints "Hello World!"
     
 
 #num1 and num2 are just place holders/parameters
@@ -21,4 +22,7 @@ def multiple_items(*args): #args = arguments
 multiple_items("Dave", "John", "Sarah")
 
 def mult_named_items(**kwargs): #kwargs = keyword arguments
-    print(print(type(kwargs)))
+    print(kwargs)
+    print(type(kwargs))
+
+mult_named_items(first = "Dave", last = "Gray")
