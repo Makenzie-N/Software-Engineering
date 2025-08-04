@@ -26,3 +26,21 @@ def mult_named_items(**kwargs): #kwargs = keyword arguments
     print(type(kwargs))
 
 mult_named_items(first = "Dave", last = "Gray")
+
+#
+def greet(name):
+    """This function takes a name as an argument and prints a greeting."""
+    print(f"Hello, {name}!")
+
+greet("Alice")
+
+#using if statements
+def check_keyword(keyword):
+    if keyword == "hello":
+        return "Greeting detected."
+    else:
+        return "No greeting detected."
+
+# Example usage
+print(check_keyword("hello"))
+print(check_keyword("world"))
