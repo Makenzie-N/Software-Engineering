@@ -16,7 +16,7 @@ print(f"Hi {name}! You're {age} years old and ready to play in Bluey's backyard.
 if is_false == True:
     print("Better bring a towel!")
 else:
-    print("No towel needded.")
+    print("No towel needed.")
 
 games_list = ["Keepy Uppy", "Magic Asparagus", "Shadowlands", "Obstacle Course", "Muffin Cone"]
 
