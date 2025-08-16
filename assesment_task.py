@@ -52,9 +52,11 @@ chosen_room = input(f"There are 4 rooms available today: {rooms}. Which room wou
 if chosen_room in rooms:
     print("{chosen_room}")
     room_abstract = rooms["Abstract Art"]
+    print(room_abstract)
 else:
-    while tour_guide not in tour_guides:
-        tour_guide = str(input(f"Tour guide not an options, please select one from the following 4: Tommy, Reece, Ben, Holly. ")).lower
-        if tour_guide in tour_guides:
-            print(f"Sounds great! {tour_guide} will be showing you around today. ")
+    while chosen_room not in rooms:
+        chosen_room = str(input(f"Chosen room not an option, plase select one of the following 4: (Abstract Art, Stunning Sculptures, Interactive Illusions, Retro Redos). ")).lower
+        if chosen_room in room:
+            print("{chosen_room}")
+            print(room_abstract)
             break
