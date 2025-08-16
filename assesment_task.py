@@ -55,8 +55,11 @@ if chosen_room in rooms:
     print(room_abstract)
 else:
     while chosen_room not in rooms:
-        chosen_room = str(input(f"Chosen room not an option, plase select one of the following 4: (Abstract Art, Stunning Sculptures, Interactive Illusions, Retro Redos). ")).lower
+        chosen_room = str(input(f"Chosen room not an option, please select one of the following 4: (Abstract Art, Stunning Sculptures, Interactive Illusions, Retro Redos). ")).lower
         if chosen_room in room:
             print("{chosen_room}")
             print(room_abstract)
             break
+input("Press enter to continue...")
+clearScreen()
+
