@@ -27,77 +27,97 @@ questions_aa = {"The Playground": "What isn't shown in this artwork?: Monkey bar
 answers_aa = {"The Playground": "a climbing wall", 
               "Kookakoala": "Kookaburra", 
               "Graffiti": "2 years"}
+
+
+wrong_answers = 0
+
+
 def clearScreen():
     os.system('cls')
 
 def colourText(text, colour):
     print(colour + text)
 
-wrong_answers = 0
+def next_move():
+    input("Would you like to view another artwork or move to the next room? (type artwork/room) ").lower()
+
+def next_move_answer():
+    if next_move == "artwork":
+        print("Which artwork would you like to view next? (The Playground, Kookakoala, Graffiti) ")
+    
 
 
 print("Welcome to the 'Museum of Mastery'!")
-input("Press enter to continue... ")
+time.sleep(1)
 
 clearScreen()
 
-tour_guide = input(f"We have 4 very lovely and keen tour guides available at the moment (Tommy, Reece, Ben and Holly), who would you like to show you around today? ")
+tour_guide = input(f"We have 4 very lovely and keen tour guides available at the moment (Tommy, Reece, Ben and Holly), who would you like to show you around today? ").lower()
 if tour_guide in tour_guides:
     print(f"Sounds great! {tour_guide} will be showing you around today.")
 else:
         while tour_guide not in tour_guides:
-            tour_guide = input(f"Tour guide not an options, please select one from the following 4: (Tommy, Reece, Ben and Holly). ")
+            tour_guide = input(f"Tour guide not an options, please select one from the following 4: (Tommy, Reece, Ben and Holly). ").lower()
             if tour_guide in tour_guides:
                 print(f"Sounds great! {tour_guide} will be showing you around today.")
                 break
-    input("Press enter to continue... ")
-    clearScreen()
+
+time.sleep(0.5)
+clearScreen()
 
 
-    name = input(f"Hi, i'm {tour_guide} and I will be your tour guide for today. What is your name? ")
-    print(f"Nice to meet you {name}!")
+name = input(f"Hi, i'm {tour_guide} and I will be your tour guide for today. What is your name? ").lower()
+print(f"Nice to meet you {name}!")
 
-    input("Press enter to continue... ")
-    clearScreen()
-
-
-    print("The first room today is 'Abstract Art'.")
-    abstract_entry = rooms["Abstract Art"]
-    print(abstract_entry)
-
-    print( )
-
-    print(f"You must view at least 1 artwork closely in order to get the full experience. - {tour_guide}")
-    abstract_paintings = paintings["Abstract Art"]
-    chosen_artwork = input(f"There are 3 artworks in this room: {abstract_paintings}. Which picture would you like to veiw first? ")
+time.sleep(0.5)
+clearScreen()
 
 
-    if chosen_artwork in abstract_paintings:
-        print(chosen_artwork)
-        artwork1_aa = aa_paintings[chosen_artwork]
-        print(artwork1_aa)
-    else:
-        while chosen_artwork not in abstract_paintings:
-            chosen_artwork = input(f"Chosen artwork not an option, please select one of the following 3: (The Playground, Kookakoala, Graffiti). ")
-            if chosen_artwork in abstract_paintings:
-                input("Press enter to continue...")
-                clearScreen()
-                print(chosen_artwork)
-                artwork1_aa = aa_paintings[chosen_artwork]
-                print(artwork1_aa)
-                break
+print("The first room today is 'Abstract Art'.")
+abstract_entry = rooms["Abstract Art"]
+print(abstract_entry)
 
-    input("Press enter to continue...")
-    clearScreen()
+print( )
 
-    question1_aa = questions_aa[chosen_artwork]
-    answer1 = input(question1_aa)
+print(f"You must view at least 1 artwork closely in order to get the full experience. - {tour_guide}")
+abstract_paintings = paintings["Abstract Art"]
+chosen_artwork = input(f"There are 3 artworks in this room: {abstract_paintings}. Which picture would you like to veiw first? ").lower()
+time.sleep(0.5)
+clearScreen()
 
 
-    correct_answer1 = answers_aa[chosen_artwork]
-    if answer1 == correct_answer1:
-        print("Correct!")
-    else:
-        print("Incorrect!")
-        wrong_answers = 1
+if chosen_artwork in abstract_paintings:
+    print(chosen_artwork)
+    artwork1_aa = aa_paintings[chosen_artwork]
+    print(artwork1_aa)
+else:
+    while chosen_artwork not in abstract_paintings:
+        chosen_artwork = input("Chosen artwork not an option, please select one of the following 3: (The Playground, Kookakoala, Graffiti). ").lower()
+        if chosen_artwork in abstract_paintings:
+            time.sleep(0.5)
+            clearScreen()
+            print(chosen_artwork)
+            artwork1_aa = aa_paintings[chosen_artwork]
+            print(artwork1_aa)
+            break
+
+input("Press enter to continue...")
+clearScreen()
+
+question1_aa = questions_aa[chosen_artwork]
+answer1 = input(question1_aa)
+
+
+correct_answer1 = answers_aa[chosen_artwork]
+if answer1 == correct_answer1:
+    print("Correct!")
+else:
+    print("Incorrect!")
+    wrong_answers = 1
+    answer_chances = 3 - wrong_answers
+    print(f"You have gotten {wrong_answers} question wrong, only {answer_chances} more chances before I kick you out. - {tour_guide}")
+
+time.sleep(0.5)
+clearScreen()
+
 
