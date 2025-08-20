@@ -38,13 +38,40 @@ def clearScreen():
 def colourText(text, colour):
     print(colour + text)
 
+def first_room_aa():
+    print("The first room today is 'Abstract Art'.")
+    abstract_entry = rooms["Abstract Art"]
+    print(abstract_entry)
+
+def second_room_ss():
+    print("The next room is 'Stunning Sculptures'.")
+    sculptures_entry = rooms["Stunning Sculptures"]
+    print(sculptures_entry)
+
+def third_room_ii():
+    print("This room is 'Interactive Illusions', our most popular!")
+    illusions_entry = rooms["Interactive Illusions"]
+    print(illusions_entry)
+
+def fourth_room_rr():
+    print("This is the last room today, 'Retro Redos'.")
+    redos_entry = rooms["Retro Redos"]
+    print(redos_entry)
+         
 def next_move():
     input("Would you like to view another artwork or move to the next room? (type artwork/room) ").lower()
-
-def next_move_answer():
+ 
+def next_move_answer_room1():
     if next_move == "artwork":
-        print("Which artwork would you like to view next? (The Playground, Kookakoala, Graffiti) ")
-    
+        next_artwork = input("Which artwork would you like to view next? (The Playground, Kookakoala, Graffiti) ").lower
+    elif next_move == "room":
+        second_room_ss()
+    else:
+        while next_move not in ["artwork", "room"]:
+            next_move = input(f"Selected move not an option, please select one of the following options: artwork, room. ")         
+
+def all_art_viewed():
+    input 
 
 
 print("Welcome to the 'Museum of Mastery'!")
@@ -52,12 +79,12 @@ time.sleep(1)
 
 clearScreen()
 
-tour_guide = input(f"We have 4 very lovely and keen tour guides available at the moment (Tommy, Reece, Ben and Holly), who would you like to show you around today? ").lower()
+tour_guide = input(f"We have 4 very lovely and keen tour guides available at the moment (Tommy, Reece, Ben, Holly), who would you like to show you around today? ").lower()
 if tour_guide in tour_guides:
     print(f"Sounds great! {tour_guide} will be showing you around today.")
 else:
         while tour_guide not in tour_guides:
-            tour_guide = input(f"Tour guide not an options, please select one from the following 4: (Tommy, Reece, Ben and Holly). ").lower()
+            tour_guide = input(f"Tour guide not an options, please select one from the following 4: Tommy, Reece, Ben, Holly. ").lower()
             if tour_guide in tour_guides:
                 print(f"Sounds great! {tour_guide} will be showing you around today.")
                 break
@@ -81,7 +108,7 @@ print( )
 
 print(f"You must view at least 1 artwork closely in order to get the full experience. - {tour_guide}")
 abstract_paintings = paintings["Abstract Art"]
-chosen_artwork = input(f"There are 3 artworks in this room: {abstract_paintings}. Which picture would you like to veiw first? ").lower()
+chosen_artwork = input(f"There are 3 artworks in this room: 'The Playground, Kookakoala, . Which picture would you like to veiw first? ").lower()
 time.sleep(0.5)
 clearScreen()
 
