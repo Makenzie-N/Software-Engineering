@@ -7,29 +7,38 @@ import colorama
 import time
 import sys
 
-tour_guides = ["Tommy", "Reece", "Ben", "Holly"]
+tour_guides = ["tommy", "reece", "ben", "holly"]
+Abstract_Art = ["the playground", "kookakoala", "graffiti"],
+Stunning_Sculptures = ["isaac newton", "taylor swift", "albert einstein", "mr Smith"],
+Interactive_Illusions = ["Stairway Hooray", "Jolly Jumps", "Dodge the Duck"]
+wrong_answers = 0
+aa_art_viewed = 0
+ss_art_viewed = 0
+ii_art_viewed = 0
+rr_art_viewed = 0
+all_art_viewed_aa = 3
+all_art_viewed_ss = 4
+all_art_viewed_ii = 3    
+all_art_viewed_rr = 3
+
+
 rooms = {"Abstract Art": "Walking into this room, you can see a wide variety of art, all of which you can barely make out the idea of the artwork. Now this, this is abstract art! You hear another tourist announce when they turn to a painting titled 'The Playground'. You are intrigued and hope that this one won't just look paint splattered across the canvas.", 
          "Stunning Sculptures": "As you walk in, you hear a nearby tour guide 'I've always loved sculptures... these ones are all natural, made entirely of leaves, sticks, rocks etc...' you hear him announce.", 
          "Interactive Illusions": "{tour_guide} begins explaining that this room is the only interactive room in the entire museum and therefore the most popular for browsing as well as art competition entries.", 
          "Retro Redos": "This is a new room according to a sign on the door. It says that a young artist came up with the idea when entering in the yearly art competition, she wanted her friend to enter as well but her friend wasn't confident enough so this young artist decide to let her friend copy her own artwork but in a different style and therfore inspired the room 'Retro Redos' for all the interpreted artworks."
-        }
-paintings = {"Abstract Art": ["The Playground", "Kookakoala", "Graffiti"],
-             "Stunning Sculptures": ["Isaac Newton", "Taylor Swift", "Ablbert Einstein", "Mr Smith"],
-             "Interactive Illusions": ["Stairway Hooray", "Jolly Jumps", "Dodge the Duck"]
-            }
+}
 aa_paintings = {"The Playground": "Inspired by the artists favourite childhood playground a slide, monkey bars, swings and a firemans pole are all depicted in this painting.", 
                "Kookakoala": "Kookaburras and Koalas are this artists favourite animals so why not combine them to make a painting which has now become this museums most popular. This artwork eventually ended up as a gift to the artists friend as these 2 animals were her favourite too.", 
                "Graffiti": "This artist had always aspired to be a graffiti artist, he was mesmorized by the freedom and creativity of the works he saw around his hometown. After finally getting there and doing graffiti for 2 years he decided to become a full time artist and so his first piece was this. 'Graffiti' is a summary of a variety of all his graffiti he created over the years."
-              }
+}
 questions_aa = {"The Playground": "What isn't shown in this artwork?: Monkey bars, swings, a slide, a climbing wall. ", 
                 "Kookakoala": "A koala and another animal are combined in this artwork, what is the other animal? ", 
-                "Graffiti": "How long did this artist do graffiti before becoming a full time artist? _ years"}
+                "Graffiti": "How long did this artist do graffiti before becoming a full time artist? _ years"
+}
 answers_aa = {"The Playground": "a climbing wall", 
               "Kookakoala": "Kookaburra", 
-              "Graffiti": "2 years"}
-
-
-wrong_answers = 0
+              "Graffiti": "2 years"
+}
 
 
 def clearScreen():
@@ -59,19 +68,49 @@ def fourth_room_rr():
     print(redos_entry)
          
 def next_move():
-    input("Would you like to view another artwork or move to the next room? (type artwork/room) ").lower()
+    move = input("Would you like to view another artwork or move to the next room? (type artwork/room) ").lower()
+    return move
  
-def next_move_answer_room1():
+def next_move_answer_inroom1():
     if next_move == "artwork":
-        next_artwork = input("Which artwork would you like to view next? (The Playground, Kookakoala, Graffiti) ").lower
+        next_artwork_room1 = input("Which artwork would you like to view next? (The Playground, Kookakoala, Graffiti) ").lower()
     elif next_move == "room":
         second_room_ss()
     else:
         while next_move not in ["artwork", "room"]:
-            next_move = input(f"Selected move not an option, please select one of the following options: artwork, room. ")         
+            next_move = input("Selected move not an option, please select one of the following options: artwork, room. ").lower()         
+    return next_artwork_room1
 
-def all_art_viewed():
-    input 
+def next_move_answer_inroom2():
+    if next_move == "artwork":
+        next_artwork_room2 = input("Which artwork would you like to view next? (Isaac Newton, Taylor Swift, Albert Einstein, Mr Smith) ").lower()
+    elif next_move == "room":
+        third_room_ii()
+    else:
+        while next_move not in ["artwork", "room"]:
+            next_move = input(f"Selected move not an option, please select one of the following options: artwork, room. ").lower()
+    return next_artwork_room2
+
+def next_move_answer_inroom3():
+    if next_move == "artwork":
+        next_artwork_room3 = input("Which artwork would you like to view next? (Stairway Hooray, Jolly Jumps, Dodge the Duck) ").lower()
+    elif next_move == "room":
+        fourth_room_rr()
+    else:
+        while next_move not in ["artwork", "room"]:
+            next_move = input(f"Selected move not an option, please select one of the following options: artwork, room. ").lower()
+    return next_artwork_room3
+
+def next_move_inroom4():
+    input("Would you like to view another artwork? (type yes/no) ").lower()
+    if next_move_inroom4 == "yes":
+        next_artwork_room4 = input("Which artwork would you like to view next? (insert retro redo artworks once named) ").lower()
+    elif next_move_inroom4 == "no":
+        print("Okey dokey. No more artworks for you!")
+    else:
+        while next_move_inroom4 not in ["yes", "no"]:
+            next_move_inroom4 = input("That is not an option, please answer yes/no. ").lower()
+    return next_artwork_room4
 
 
 print("Welcome to the 'Museum of Mastery'!")
@@ -79,7 +118,9 @@ time.sleep(1)
 
 clearScreen()
 
-tour_guide = input(f"We have 4 very lovely and keen tour guides available at the moment (Tommy, Reece, Ben, Holly), who would you like to show you around today? ").lower()
+print("We have 4 very lovely and keen tour guides available at the moment (Tommy, Reece, Ben, Holly).")
+tour_guide = input("Who would you like to show you around today? ").lower()
+
 if tour_guide in tour_guides:
     print(f"Sounds great! {tour_guide} will be showing you around today.")
 else:
@@ -107,20 +148,19 @@ print(abstract_entry)
 print( )
 
 print(f"You must view at least 1 artwork closely in order to get the full experience. - {tour_guide}")
-abstract_paintings = paintings["Abstract Art"]
 chosen_artwork = input(f"There are 3 artworks in this room: 'The Playground, Kookakoala, . Which picture would you like to veiw first? ").lower()
 time.sleep(0.5)
 clearScreen()
 
 
-if chosen_artwork in abstract_paintings:
+if chosen_artwork in Abstract_Art:
     print(chosen_artwork)
     artwork1_aa = aa_paintings[chosen_artwork]
     print(artwork1_aa)
 else:
-    while chosen_artwork not in abstract_paintings:
+    while chosen_artwork not in Abstract_Art:
         chosen_artwork = input("Chosen artwork not an option, please select one of the following 3: (The Playground, Kookakoala, Graffiti). ").lower()
-        if chosen_artwork in abstract_paintings:
+        if chosen_artwork in Abstract_Art:
             time.sleep(0.5)
             clearScreen()
             print(chosen_artwork)
@@ -144,7 +184,12 @@ else:
     answer_chances = 3 - wrong_answers
     print(f"You have gotten {wrong_answers} question wrong, only {answer_chances} more chances before I kick you out. - {tour_guide}")
 
+aa_art_viewed = 1
+
 time.sleep(0.5)
 clearScreen()
 
 
+next_move()
+
+next_move_answer_inroom1()
