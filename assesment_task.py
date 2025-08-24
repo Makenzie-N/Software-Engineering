@@ -7,7 +7,7 @@ import colorama
 import time
 import sys
 
-tour_guides = ["tommy", "reece", "ben", "holly"]
+tour_guides = ["Tommy", "Reece", "Ben", "Holly"]
 Abstract_Art = ["the playground", "kookakoala", "graffiti"],
 Stunning_Sculptures = ["isaac newton", "taylor swift", "albert einstein", "mr Smith"],
 Interactive_Illusions = ["Stairway Hooray", "Jolly Jumps", "Dodge the Duck"]
@@ -119,7 +119,7 @@ time.sleep(1)
 clearScreen()
 
 print("We have 4 very lovely and keen tour guides available at the moment (Tommy, Reece, Ben, Holly).")
-tour_guide = input("Who would you like to show you around today? ").lower()
+tour_guide = input("Who would you like to show you around today? ")
 
 if tour_guide in tour_guides:
     print(f"Sounds great! {tour_guide} will be showing you around today.")
